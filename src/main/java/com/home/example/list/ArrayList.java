@@ -1,13 +1,12 @@
 package com.home.example.list;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class ArrayList implements List {
+
     int size = 20;
-    String [] array = new String[size];
+    String[] array = new String[size];
     int cursor = 0;
 
-    public ArrayList(String ... strings) {
+    public ArrayList(String... strings) {
         for (String str : strings) {
             array[cursor] = str;
             cursor++;
@@ -27,7 +26,7 @@ public class ArrayList implements List {
 
     @Override
     public String delete(int i) {
-        throw new NotImplementedException();
+        throw new RuntimeException("Not implemented yet!");
     }
 
     @Override
@@ -42,8 +41,8 @@ public class ArrayList implements List {
 
     /**
      * @param str
-     * @throws IllegalArgumentException if illegal string passed
      * @return
+     * @throws IllegalArgumentException if illegal string passed
      */
     @Override
     public int getPosition(String str) {
